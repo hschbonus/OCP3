@@ -70,7 +70,7 @@ section {
 	margin-bottom: 40px;
 }
 
-.categories button {
+.categories .btn {
 	background-color: #FFFEF8;
 	border: none;
 	font-family: 'Syne';
@@ -81,6 +81,12 @@ section {
 	border-radius: 60px;
 	cursor: pointer;
 	border: #1D6154 1px solid;
+	transition: 0.3s;
+}
+
+input:checked + .btn {
+	background-color: #1D6154;
+	color: white;
 }
 
 h1{
