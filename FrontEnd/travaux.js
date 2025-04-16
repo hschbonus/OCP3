@@ -15,11 +15,17 @@ for (let i = 0; i < travaux.length; i++) {
     const travauxFigure = document.createElement("figure");
     travauxFigure.dataset.id = travaux[i].id;
     
-    // Création des balises
+    // Création des images
     const travauxImage = document.createElement("img");
     travauxImage.src = travauxElement.imageUrl;
 
+    // Ajout de l'attribut alt
+    const travauxAlt = document.createElement("figcaption");
+    travauxAlt.innerText = travauxElement.title;
+
     // Ajout du code dans la section "gallery"
-    sectionGallery.appendChild(travauxImage);
+    sectionGallery.appendChild(travauxFigure);
+    travauxFigure.appendChild(travauxImage);
+    travauxFigure.appendChild(travauxAlt);
 }
 
