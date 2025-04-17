@@ -116,15 +116,29 @@ nav ul {
 	display: flex;
 	align-items: center;
 	list-style-type: none;
-
 }
+
 nav li {
 	padding: 0 10px;
 	font-size: 1.2em;
+	cursor: pointer;
+
+}
+
+nav a {
+	text-decoration: none;
+	font-family: 'Syne';
+	font-weight: 700;
+}
+
+nav a:visited {
+	color: black;
+
 }
 
 li:hover {
 	color: #B1663C;
+	
 }
 #introduction {
 	display: flex;
@@ -167,8 +181,8 @@ li:hover {
 
 }
 #contact {
-	width: 50%;
-margin: auto;
+	width: 50%; 
+	margin: auto;
 }
 #contact > * {
 	text-align: center;
@@ -197,6 +211,21 @@ margin: auto;
 	border: none;
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 }
+
+.body-login #contact {
+	margin-top: 200px;
+	margin-bottom: 500px;
+}
+
+.body-login #contact a {
+	text-align: center;
+	display: block;
+}
+
+.body-login #contact a:visited {
+	color: black;
+}
+
 
 input[type="submit"]{
 	font-family: 'Syne';
