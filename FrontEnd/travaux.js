@@ -4,6 +4,10 @@ const reponse = await fetch('http://localhost:5678/api/works');
 // Convertit la réponse en objet JavaScript
 const travaux = await reponse.json();
 
+// Lecture du token en localStorage
+const valToken = localStorage.getItem("token");
+console.log(valToken);
+
 // Récupération de la section "gallery"
 const sectionGallery = document.querySelector(".gallery");
 
