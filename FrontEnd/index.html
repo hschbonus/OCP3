@@ -9,22 +9,27 @@
 	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
 	<meta name="description" content="">
 	<link rel="stylesheet" href="./assets/style.css">
-	
+	<script src="https://kit.fontawesome.com/ff0998e42b.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
 <header>
-	<div class="bandeau-edition" style.display="none">
-		
-		<img src="./assets/images/logo.png" alt="Logo de Sophie Bluel">
-	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
-	<nav>
-		<ul>
-			<a href="index.html"></a><li>projets</li></a>
-			<a href=""></a><li>contact</li></a>
-			<a href="login.html"><li>login</li></a>
-			<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
-		</ul>
-	</nav>
+	<div class="bandeau-edition">
+		<i class="fa-regular fa-pen-to-square" style="color: #ffffff;"></i>
+		<span>Mode édition</span>
+	</div>
+	<div class="bandeau-normal">
+		<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+		<nav>
+			<ul>
+				<a href="index.html"><li>projets</li></a>
+				<a href=""><li>contact</li></a>
+				<a class="nav-login" href="login.html"><li>login</li></a>
+				<a class="nav-logout"><li>logout</li></a>
+				<li><img src="./assets/icons/instagram.png" alt="Instagram"></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 <main>
 	<section id="introduction">
@@ -40,7 +45,7 @@
 	</section>
 	<section id="portfolio">
 		<h2>Mes Projets</h2>
-		<div class="categories">
+		<div class="categories" style="display: flex;">
 			<label>
 				<input type="radio" name="cat" id="tous" hidden>
 				<span class="btn">Tous</span>

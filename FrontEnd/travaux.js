@@ -5,8 +5,24 @@ const reponse = await fetch('http://localhost:5678/api/works');
 const travaux = await reponse.json();
 
 // Lecture du token en localStorage
-const valToken = localStorage.getItem("token");
+const valToken = sessionStorage.getItem("token");
 console.log(valToken);
+
+// Passage en mode edition si le token est présent
+if (valToken) {
+    console.log("mode edition activé");
+    document.querySelector('.bandeau-edition').classList.add('edition');
+    document.querySelector('.bandeau-normal').classList.add('edition');
+    document.querySelector('.nav-login').classList.add('edition');
+    document.querySelector('.nav-logout').classList.add('edition');
+}
+
+// Deconnexion de l'utilisateur
+const deconnexion = document.querySelector(".nav-logout");
+deconnexion.addEventListener("click", () => {
+    sessionStorage.removeItem("token"); // Supprime le token du localStorage
+    window.location.href = "index.html"; // Redirige vers la page d'accueil
+});
 
 // Récupération de la section "gallery"
 const sectionGallery = document.querySelector(".gallery");

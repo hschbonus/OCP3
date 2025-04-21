@@ -54,10 +54,17 @@ body {
 	font-family: 'Work Sans' ;
 	font-size: 14px;
 }
+
 header {
 	display: flex;
+	flex-direction: column;
+}
+
+
+.bandeau-normal {
+	display: flex;
 	justify-content: space-between;
-	margin: 50px 0
+	margin-top: 50px
 }
 section {
 	margin: 50px 0
@@ -147,6 +154,7 @@ li:hover {
 #introduction figure {
 	flex: 1
 }
+
 #introduction img {
 	display: block;
 	margin: auto;
@@ -251,4 +259,43 @@ footer nav ul {
 	font-family: 'Syne';
 	font-weight: 700;
 	margin: 2em;
+}
+
+.bandeau-edition {
+	display: none;
+}
+
+.nav-logout {
+	display: none;
+}
+
+/* MODE EDITION */
+
+.bandeau-edition.edition {
+	display: block;
+	background-color: black;
+	color: white;
+	height: 59px;
+	position: fixed;
+	left : 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap : 21px;
+	font-size: 16px;
+	width: 100vw !important;
+	max-width: 100vw !important;
+	margin-left: calc(-50vw + 50%);
+}
+
+.bandeau-normal.edition {
+	margin-top: 109px;
+}
+
+.nav-login.edition {
+	display: none;
+}
+
+.nav-logout.edition {
+	display: block;
 }
