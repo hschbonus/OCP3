@@ -23,12 +23,12 @@ loginForm.addEventListener("submit", (event) => {
         if (reponse.ok) {
             return reponse.json();
         } else {
-            throw new Error("Erreur de connexion");
+            throw new Error("Erreur dans l’identifiant ou le mot de passe");
         }
     })
     .then(data => {
         console.log(data);
-        localStorage.setItem("token", data.token);
+        sessionStorage.setItem("token", data.token);
         window.location.href = "index.html";
     })
     .catch(error => {
@@ -40,6 +40,4 @@ loginForm.addEventListener("submit", (event) => {
         }
         console.error("Erreur:", error);
     })
-    const valToken = localStorage.getItem("token");
-    console.log(valToken);
 });

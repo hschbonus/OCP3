@@ -246,3 +246,9 @@ footer nav ul {
 	margin: 2em
 }
 
+#error-message {
+	color : red;
+	font-family: 'Syne';
+	font-weight: 700;
+	margin: 2em;
+}
