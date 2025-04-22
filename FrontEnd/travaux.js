@@ -15,13 +15,15 @@ if (valToken) {
     document.querySelector('.bandeau-normal').classList.add('edition');
     document.querySelector('.nav-login').classList.add('edition');
     document.querySelector('.nav-logout').classList.add('edition');
+    document.querySelector('.modif-portfolio').classList.add('edition');
+    document.querySelector('.categories').classList.add('edition');
 }
 
 // Deconnexion de l'utilisateur
 const deconnexion = document.querySelector(".nav-logout");
 deconnexion.addEventListener("click", () => {
-    sessionStorage.removeItem("token"); // Supprime le token du localStorage
-    window.location.href = "index.html"; // Redirige vers la page d'accueil
+    sessionStorage.removeItem("token");
+    window.location.href = "index.html";
 });
 
 // Récupération de la section "gallery"

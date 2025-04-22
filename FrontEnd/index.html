@@ -44,8 +44,14 @@
 		</article>
 	</section>
 	<section id="portfolio">
-		<h2>Mes Projets</h2>
-		<div class="categories" style="display: flex;">
+		<div class="entete-portfolio">	
+			<h2>Mes Projets</h2>
+			<a href="#modale" class="modif-portfolio">
+				<i class="fa-regular fa-pen-to-square" style="color: black;"></i>
+				<p>modifier</p>
+			</a>
+		</div>
+		<div class="categories">
 			<label>
 				<input type="radio" name="cat" id="tous" hidden>
 				<span class="btn">Tous</span>
@@ -71,6 +77,29 @@
 	</section>
 </main>
 
+<!-- MODALES -->
+
+<aside id="modale1" class="modale" aria-hidden="true" role="dialog" aria-modal="false">
+	<div class="modale-galerie">
+		<div class="modale-icones">
+			<button class="btn-fermer" aria-label="Quitter l'édition">
+				<i class="fa-solid fa-xmark fa-2xl"></i>
+			</button>
+		</div>
+		<div class="modale-title">
+			<h1>Galerie photo</h1>
+		</div>
+		<div class="modale-content">
+				<!-- Code ajouté en dynamique -->
+		</div>
+		</div>
+		<div class="modale-footer">
+			<button class="btn" aria-label="Ajouter une photo">
+				<p>Ajouter une photo</p>
+			</button>
+</aside>
+
+
 <footer>
 	<nav>
 		<ul>
@@ -80,6 +109,7 @@
 </footer>
 
 <script type="module" src="travaux.js"></script>
+<script type="module" src="modale.js"></script>
 
 </body>
 </html>
