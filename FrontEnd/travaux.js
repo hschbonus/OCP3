@@ -20,8 +20,7 @@ if (valToken) {
 }
 
 // Deconnexion de l'utilisateur
-const deconnexion = document.querySelector(".nav-logout");
-deconnexion.addEventListener("click", () => {
+document.querySelector(".nav-logout").addEventListener("click", () => {
     sessionStorage.removeItem("token");
     window.location.href = "index.html";
 });
