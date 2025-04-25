@@ -6,7 +6,7 @@ const travaux = await reponse.json();
 
 // Lecture du token en localStorage
 const valToken = sessionStorage.getItem("token");
-console.log(valToken);
+// console.log(valToken);
 
 // Passage en mode edition si le token est présent
 if (valToken) {
@@ -104,4 +104,18 @@ boutonFiltrer.forEach((bouton) => {
 })
 
 // Affichange des travaux dans la modale-galerie
-const modalFigures = document.createElement(".modale-figure");
+for (let i = 0; i < travaux.length; i++) {
+    const travauxElement = travaux[i];
+    console.log(travaux)
+    
+    const modalFigure = document.createElement("figure");
+    modalFigure.dataset.id = travaux[i].id;
+
+    const modalImage = document.createElement("img");
+    modalImage.src = travauxElement.imageUrl;
+
+    // Ajout du code dans la modale
+    const modalGalery = document.querySelector(".modale-travaux");
+    modalGalery.appendChild(modalFigure);
+    modalFigure.appendChild(modalImage);
+}

@@ -312,7 +312,7 @@ footer nav ul {
 }
 
 
-/* MODALES   */
+/* MODALES */
 
 .modal {
 	display: flex;
@@ -322,10 +322,12 @@ footer nav ul {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.7);
-	
 }
 
 .modale-galerie, .modale-ajout {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width : 630px;
 	height : 688px;
 	position : fixed;
@@ -336,27 +338,41 @@ footer nav ul {
 	border-radius: 10px;
 }
 
-.modale-galerie .modale-icones {
+.modale-content {
 	display: flex;
-	justify-content: right;
+	flex-direction: column;
+	width: 420px;
+	height: 100%;
 }
 
-.modale-ajout .modale-icones {
-	display: flex;
-	justify-content: space-between;
-}
+/* STYLE ET POSITION DES BOUTONS FERMER ET RETOUR */
 
-.modale-icones {
-	display: flex;
-	justify-content: space-between;
-	margin: 20px;
-}
-
-.modale-icones a {
+.btn-fermer {
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	margin: 25px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	margin: 30px;
+}
+
+.modale-ajout .open-modal {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	position: fixed;
+	top: 0;
+	left: 0;
+	margin: 30px;
+}
+
+.modale-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 136px;
+	width: 420px;
 }
 
 .modale-title h1 {
@@ -364,14 +380,22 @@ footer nav ul {
 	font-size: 26px;
 	font-weight: 400;
 	color: black;
-	position : fixed;
-	top : 80px;
-	left : 50%;
-	transform : translate(-50%, -50%);
+	margin: 0;
+	padding: 0;
 }
 
 .modale-travaux {
-	border-bottom: 1px solid black;
+	display: grid;
+	justify-content: space-between;
+	grid-template-columns: 76.5px 76.5px 76.5px 76.5px 76.5px;
+	grid-template-rows: 102.5px 102.5px 102.5px;
+	grid-row-gap: 25px;
+}
+
+.modale-travaux img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 }
 
 .modale-footer button {
@@ -412,13 +436,6 @@ footer nav ul {
 	cursor: pointer;
 	box-sizing: border-box;
 	text-decoration: none;
-}
-
-.modale-content {
-	width: 420px;
-	display: wrap;
-	justify-content: center;
-	background-color: red;
 }
 
 /* MODE EDITION */
