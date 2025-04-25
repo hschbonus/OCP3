@@ -15,7 +15,7 @@ if (valToken) {
     document.querySelector('.bandeau-normal').classList.add('edition');
     document.querySelector('.nav-login').classList.add('edition');
     document.querySelector('.nav-logout').classList.add('edition');
-    document.querySelector('.modif-portfolio').classList.add('edition');
+    document.querySelector('.open-modal').classList.add('edition');
     document.querySelector('.categories').classList.add('edition');
 }
 
@@ -102,3 +102,6 @@ boutonFiltrer.forEach((bouton) => {
     }
     );
 })
+
+// Affichange des travaux dans la modale-galerie
+const modalFigures = document.createElement(".modale-figure");
