@@ -11,13 +11,8 @@ loginForm.addEventListener("submit", (event) => {
 
     fetch("http://localhost:5678/api/users/login", {
         method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            email: login.value,
-            password: password.value
-        })
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({email: login.value, password: password.value})
     })
     .then(reponse => {
         if (reponse.ok) {

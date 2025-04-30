@@ -113,11 +113,28 @@
 				<h1>Ajout photo</h1>
 			</div>
 			<div class="modale-ajouter">
-					<!-- Code ajouté en dynamique -->
+				<form class="ajout-photo" action="" method="post">
+					<div class="input-photo-zone">
+						<i id="input_icon" class="fa-regular fa-image fa-sm"></i>
+						<label for="image" class="custom-label">
+							+ Ajouter photo
+						</label>
+						<input type="file" name="image" id="image" class="'hidden-input">
+						<p id="input_p">jpg, png : 4mo max</p>
+					</div>
+					<label for="title">Titre</label>
+					<input type="text" name="title" id="titre">
+					<label for="category">Catégorie</label>
+					<select name="category" id="categorie">
+						<option value="0"></option>
+						<!-- Autres catégories ajoutées en dynamique -->
+					</select>
+				</form>
 			</div>
 			<div class="modale-footer">
-				<a aria-label="Valider">
+				<a aria-label="Valider" id="valider-ajout">
 					<p>Valider</p>
+					<div id="error-message-ajout"></div>
 				</a>
 			</div>
 		</div>
@@ -133,8 +150,8 @@
 	</nav>
 </footer>
 
-<script type="module" src="travaux.js"></script>
-<script type="module" src="modale.js"></script>
+<script src="modale.js"></script>
+<script src="travaux.js"></script>
 
 </body>
 </html>

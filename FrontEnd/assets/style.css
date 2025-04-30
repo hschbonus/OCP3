@@ -32,6 +32,9 @@ body {
 	line-height: 1;
 	background-color: #FFFEF8;
 }
+
+
+
 ol, ul {
 	list-style: none;
 }
@@ -152,6 +155,7 @@ nav a {
 	text-decoration: none;
 	font-family: 'Syne';
 	font-weight: 700;
+	color: black;
 }
 
 nav a:visited {
@@ -294,7 +298,7 @@ footer nav ul {
 	margin: 0;
 }
   
-.open-modal.edition {
+.entete-portfolio .open-modal {
 	position: absolute;
 	left: calc(50% + 120px);
 	display: none;
@@ -367,6 +371,7 @@ footer nav ul {
 	margin: 30px;
 }
 
+
 .modale-title {
 	display: flex;
 	justify-content: center;
@@ -396,6 +401,22 @@ footer nav ul {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+}
+
+.modale-travaux button {
+	all: unset;
+	cursor: pointer;
+	position : relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transform : translate(-100%, -0%);
+	top : -95%;
+	left : 90%;
+	height: 17px;
+	width: 17px;
+	border-radius: 2px;
+	background-color: black;
 }
 
 .modale-footer button {
@@ -428,7 +449,7 @@ footer nav ul {
 	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
 	font-family: 'Syne';
 	font-weight: 700;
-	color: white;
+	color: white !important;
 	background-color: #1D6154;
 	margin : 0;
 	width: 237px;
@@ -436,6 +457,106 @@ footer nav ul {
 	cursor: pointer;
 	box-sizing: border-box;
 	text-decoration: none;
+}
+
+.modale-ajout .modale-footer a {
+	background-color: #A7A7A7;
+}
+
+.ajout-photo {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	font-family: "Work Sans";
+	font-size: 14px;
+	font-weight: 500;
+	color : #3D3D3D;
+	margin: 0;
+	height: 100%;
+	width: 100%;
+	gap : 10px;
+}
+
+.input-photo-zone {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	height: 169px !important;
+	width: 100%;
+	background-color: #E8F1F6;
+	border-radius: 10px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	box-shadow: none !important;
+	border-radius: 0;
+}
+
+.input-photo-zone img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.custom-label {
+	width: 173px;
+	height: 36px;
+	border-radius: 50px;
+	background-color: #CBD6DC;
+	color : #306685;
+	font-family: "Work Sans";
+	font-size: 14px;
+	font-weight: 500;
+	align-items: center;
+	cursor: pointer;
+	padding: 0;
+	justify-content: center;
+	display: flex;
+}
+
+input[type="file"] {
+	display: none;
+}
+
+.input-photo-zone i {
+	font-size: 76px;
+	color: #B9C5CC;
+	padding-top: 45px;
+	padding-bottom: 20px;
+}
+
+.input-photo-zone p {
+	font-family: "Work Sans";
+	font-size: 10px;
+	font-weight: 000;
+	color: #444444;
+	text-align: center;
+	padding-bottom: 15px;
+}
+
+.ajout-photo input, select {
+	height: 51px;
+	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+	border: none;
+	font-family: "Work Sans";
+	padding-left: 15px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #444444;
+}
+
+.ajout-photo label {
+	margin-top: 10px;
+}
+
+
+.ajout-photo select {
+	appearance: none;
+	cursor: pointer;
+	background-image: url(../assets/icons/chevron-down-solid.svg);
+	background-position: right 30px center;
+	background-repeat: no-repeat;
+	background-size: 12px;
+	padding-right: 20px;
 }
 
 /* MODE EDITION */
@@ -470,7 +591,7 @@ footer nav ul {
 	display: block;
 }
 
-.open-modal.edition.edition {
+.open-modal.edition {
 	display: flex;
 }
 
@@ -480,4 +601,8 @@ footer nav ul {
 
 .entete-portfolio {
 	margin-bottom: 100px;
+}
+
+.modale-ajout .modale-footer a.validok {
+	background-color: #1D6154 !important;
 }
