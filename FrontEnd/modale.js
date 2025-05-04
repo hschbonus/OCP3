@@ -24,6 +24,7 @@ input.addEventListener('change', (e) => {
 
 const openModal = (e) => {
     e.preventDefault();
+
     if (modal !== null) {
         modal.style.display = 'none';
         modal.setAttribute('aria-hidden', 'true');
@@ -58,7 +59,8 @@ const closeModal = (e) => {
     modal.querySelector('.js-modal-stop').removeEventListener('click', stopPropagation);
     modal = null;
 
-    // Réinitialiser la zone input si une image est présente
+    // Réinitialiser la zone input si une image est présente SAVE
+    
     const img = document.querySelector('.input-photo-zone img');
     if (img) {
         const inputZone = document.querySelector('.input-photo-zone');
@@ -83,6 +85,15 @@ const closeModal = (e) => {
             inputZone.appendChild(img);
         });
     }
+
+    const inputZoneImage = document.querySelector('#image');
+    const formTitle = document.querySelector('#titre');
+    const formCategory = document.querySelector('#categorie');
+    inputZoneImage.value = "";
+    formTitle.value = "";
+    formCategory.value = "0";
+
+
 };
 
 const stopPropagation = (e) => {
