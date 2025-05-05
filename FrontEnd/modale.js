@@ -41,6 +41,8 @@ const openModal = (e) => {
     modal.addEventListener('click', closeModal);
     modal.querySelector('.btn-fermer').addEventListener('click', closeModal);
     modal.querySelector('.js-modal-stop').addEventListener('click', stopPropagation);
+    document.getElementById('valider-ajout').classList.remove('validok');
+
 };
 
 const closeModal = (e) => {

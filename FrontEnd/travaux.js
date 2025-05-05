@@ -80,6 +80,22 @@ const ajoutTravaux = (e) => {
         modalFigure.appendChild(modalImg);
         modalFigure.appendChild(btnFigure);
         document.querySelector(".modale-travaux").appendChild(modalFigure);
+
+        // Réinitialisation du formulaire
+        form.reset();
+        const inputZone = document.querySelector('.input-photo-zone');
+        inputZone.innerHTML = `
+            <i class="fa-regular fa-image fa-sm"></i>
+            <label for="image" class="custom-label">
+                + Ajouter photo
+            </label>
+            <input type="file" name="image" id="image" class="hidden-input">
+            <p>jpg, png : 4mo max</p>
+        `;
+
+        input = document.querySelector('#image');
+        input.value = "";
+        
     })
     
     .catch(error => {
@@ -155,7 +171,9 @@ async function fetchTravaux() {
     const categoriesIdSet = [...new Set(categoriesId)];
 
     // Affichage des catégories en dynamique
-    document.querySelector("#categorie").innerHTML = "";
+    document.querySelector("#categorie").innerHTML = `						
+        <option value="0">Sélectionnez une option</option>
+        `;
     for (let c = 0; c < categoriesSet.length; c++) {
         // Partie filtres
         const sectionCategories = document.querySelector(".categories");
