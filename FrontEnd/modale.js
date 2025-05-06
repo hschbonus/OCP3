@@ -25,7 +25,6 @@ const resetInputZone = () => {
 
 const afficherPreview = () => {
     input.addEventListener('change', (e) => {
-        console.log(e.target.files[0]);
         
         // Cacher le contenu de input zone
         inputZoneImage.style.display = 'none';

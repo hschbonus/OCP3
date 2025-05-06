@@ -3,7 +3,6 @@ const valToken = sessionStorage.getItem("token");
 
 // Passage en mode edition si le token est présent
 if (valToken) {
-    console.log("mode edition activé");
     document.querySelector('.bandeau-edition').classList.add('edition');
     document.querySelector('.bandeau-normal').classList.add('edition');
     document.querySelector('.nav-login').classList.add('edition');
@@ -23,12 +22,8 @@ document.querySelector(".nav-logout").addEventListener("click", () => {
 const ajoutTravaux = (e) => {
     e.preventDefault();
     const form = document.querySelector(".ajout-photo");
-    const formData = new FormData(form);
-    
-    for (let [key, value] of formData.entries()) {
-        console.log(`${key}:`, value);
-    }
-    
+    const formData = new FormData(form);    
+   
     fetch("http://localhost:5678/api/works", {
         method: "POST",
         headers: {
@@ -44,7 +39,6 @@ const ajoutTravaux = (e) => {
         }
     })
     .then(data => {
-        console.log("Travail ajouté avec succès:", data);
 
         document.getElementById("ok-message-ajout").classList.add('block');
         document.getElementById("error-message-ajout").classList.remove('block');
@@ -161,7 +155,6 @@ async function fetchTravaux() {
     const reponse = await fetch('http://localhost:5678/api/works');
 
     travaux = await reponse.json();
-    console.log(travaux);
 
     // Récupération de la section "gallery"
     const sectionGallery = document.querySelector(".gallery");
@@ -306,10 +299,8 @@ champs.forEach(champ => {
             document.querySelector('#titre').value.trim() !== '' &&
             document.querySelector('#categorie').value !== '0') {
             document.getElementById('valider-ajout').classList.add('validok');
-            console.log("ok");
         } else {
             document.getElementById('valider-ajout').classList.remove('validok');
-            console.log("pas ok");
         }
     });
 })

@@ -22,7 +22,6 @@ loginForm.addEventListener("submit", (event) => {
         }
     })
     .then(data => {
-        console.log(data);
         sessionStorage.setItem("token", data.token);
         window.location.href = "index.html";
     })
