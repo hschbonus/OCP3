@@ -342,12 +342,51 @@ footer nav ul {
 	border-radius: 10px;
 }
 
+.modale-ajouter {
+	width : 420px;
+	height : 358px;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.modale-ajouter form {
+	gap: 10px;
+}
+
 .modale-content {
 	display: flex;
 	flex-direction: column;
-	width: 420px;
+	width: 420px !important;
 	height: 100%;
+	align-items: center;
 }
+
+#error-message-ajout {
+	color : red;
+	font-family: 'Syne';
+	font-weight: 700;
+	padding-top: 30px;
+	display : none;
+}
+
+#ok-message-ajout {
+	color : green;
+	font-family: 'Syne';
+	font-weight: 700;
+	padding-top: 30px;
+	display : none;
+}
+
+#error-message-ajout.block {
+	display : block;
+}
+
+#ok-message-ajout.block {
+	display : block;
+}
+
 
 /* STYLE ET POSITION DES BOUTONS FERMER ET RETOUR */
 
@@ -398,6 +437,7 @@ footer nav ul {
 	grid-template-columns: 76.5px 76.5px 76.5px 76.5px 76.5px;
 	grid-template-rows: 102.5px 102.5px 102.5px;
 	grid-row-gap: 25px;
+	grid-column-gap: 10px;
 }
 
 .modale-travaux img {
@@ -477,7 +517,7 @@ footer nav ul {
 	margin: 0;
 	height: 100%;
 	width: 100%;
-	gap : 10px;
+	/* gap : 10px; */
 }
 
 

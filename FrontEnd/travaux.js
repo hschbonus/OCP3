@@ -45,6 +45,10 @@ const ajoutTravaux = (e) => {
     })
     .then(data => {
         console.log("Travail ajouté avec succès:", data);
+
+        document.getElementById("ok-message-ajout").classList.add('block');
+        document.getElementById("error-message-ajout").classList.remove('block');
+
     
         // Récupération du nom de la catégorie depuis le formulaire
         const categorieSelect = document.querySelector("#categorie");
@@ -81,25 +85,27 @@ const ajoutTravaux = (e) => {
         modalFigure.appendChild(btnFigure);
         document.querySelector(".modale-travaux").appendChild(modalFigure);
 
-        // Réinitialisation du formulaire
-        form.reset();
-        const inputZone = document.querySelector('.input-photo-zone');
-        inputZone.innerHTML = `
-            <i class="fa-regular fa-image fa-sm"></i>
-            <label for="image" class="custom-label">
-                + Ajouter photo
-            </label>
-            <input type="file" name="image" id="image" class="hidden-input">
-            <p>jpg, png : 4mo max</p>
-        `;
-
+        inputZoneImage.style.display = 'block';
+        inputZoneLabel.style.display = 'flex';
+        inputZoneP.style.display = 'block';
+    
         input = document.querySelector('#image');
         input.value = "";
+        form.reset();
+
+        const imgPrev = document.querySelector('.input-photo-zone img');
+        if (imgPrev) {
+            imgPrev.remove();
+        }
+    
         
     })
     
     .catch(error => {
         console.error("Erreur lors de l'ajout du travail:", error);
+        document.getElementById("ok-message-ajout").classList.remove('block');
+        document.getElementById("error-message-ajout").classList.add('block');
+
     })
 }
 
@@ -282,7 +288,6 @@ async function fetchTravaux() {
     const btnajout = document.querySelector("#valider-ajout")
     btnajout.addEventListener('click', (e) => {
         ajoutTravaux(e);
-        // fetchTravaux();
     });
 }
 
